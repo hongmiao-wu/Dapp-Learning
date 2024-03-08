@@ -1,17 +1,9 @@
-[中文](./README-CN.md) / English
+## 前言
 
-## Introduction
+在区块链的网络中, 智能合约无法自动调用他们自己的合约方法, 只能通过外部调用进行触发.  
+为此, ChainLink 提供了自动调度服务, 通过注册 ChainLink 的 Keeper, 就可以自动触发合约中的接口.
 
-In the blockchain network, smart contracts **cannot automatically call their own contract methods**, but can only be triggered by external calls.  
-For this reason, ChainLink provides an auto-scheduling service, by registering with ChainLink's **Upkeep**, you can automatically trigger the interface in the contract.
-
-In order to test the code, the private key and INFURA_ID should be placed in `.env`, please see the format in the example file  `.env.example`.
-
-## Prerequisites
-1. LINK token on the testnet 
-2. npx and yarn 
-3. Infura Api key
-
+为方便代码测试, 在 .env 中放入的私钥 和 INFURA_ID，样例文件可参考 .env.example
 
 ## 原理解析  
 - Keeper 接口合约  
@@ -103,7 +95,7 @@ performUpkeep 用于执行具体的业务逻辑, 或是调用其他的合约处�
   console.log('The value of counter is :', parseInt(counterVal));
   ```
 
-## Reference
-chainlink-keepers document:  https://docs.chain.link/docs/chainlink-keepers/introduction/   
-gelato.finance website: http://gelato.finance/ 
+## 参考文档
+chainlink-keepers 文档:  https://docs.chain.link/docs/chainlink-keepers/introduction/   
+gelato.finance 官网: http://gelato.finance/ 
 

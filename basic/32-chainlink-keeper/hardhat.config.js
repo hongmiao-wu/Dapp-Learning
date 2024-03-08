@@ -66,5 +66,11 @@ module.exports = {
         mnemonic()
       ],
     },
+    sepolia: {
+      url: "https://sepolia.infura.io/v3/" + process.env.INFURA_ID, //<---- YOUR INFURA ID! (or it won't work)
+      accounts: [
+        mnemonic()
+      ],
+    },
   }
 };

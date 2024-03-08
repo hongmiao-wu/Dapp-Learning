@@ -10,7 +10,7 @@ const counterContractAddress = require("./CounterContractaddress.json");
 async function main() {
   const [deployer] = await ethers.getSigners();
   const artifact = artifacts.readArtifactSync("Counter");
-  const provider = new ethers.providers.InfuraProvider("kovan");
+  const provider = new ethers.providers.InfuraProvider("sepolia");
 
   const providerContract = new ethers.Contract(
     counterContractAddress.address,
